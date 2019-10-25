@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
+import CreditCard from './components/CreditCard';
 import  EntryForm from './components/EntryForm';
 
 class App extends React.Component {
@@ -56,15 +57,17 @@ class App extends React.Component {
             value: '12',
         },
     ],
-    expYear: null,
+    expMonth: 11,
+    expYear: 2020,
     cvv: null,
     cardName: null,
-    cardNumber: null
+    cardNumber: null,
     }
   }
   render() {
     return (
       <Container id="main-container">
+        <CreditCard props={this.state}/>
         <EntryForm props={this.state}/>
       </Container>
     );
